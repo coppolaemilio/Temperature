@@ -12,3 +12,14 @@ var cities = [
 	'Dublin', 'Lisbon', 'Rome', 'Zurich', 'Vienna', 'Prague', 'Warsaw', 'Kyoto',
 	'Sydney', 'Havana', 'Brasilia'
 ]
+
+var news = [
+	'It seems like Bitcoin is up!',
+	'Some people disagree',
+	'The president of a country does something',
+	'A natural disaster happened very far from your home',
+	'Bitcoin crashed',
+	'Supreme Court rules against memes',
+	'Country full of emigrants is not accepting inmigrants',
+	'A very old superhero gets its own movie',
+]
