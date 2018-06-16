@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/See_you_Soon.ogg-425df59a6495dd7ea0593034559d36dc.oggstr"
+
+[deps]
+
+source_file="res://Music/See_you_Soon.ogg"
+dest_files=[ "res://.import/See_you_Soon.ogg-425df59a6495dd7ea0593034559d36dc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

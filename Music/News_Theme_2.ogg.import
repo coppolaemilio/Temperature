@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/News_Theme_2.ogg-56903591a0c4769bc49d14f5cec88cbf.oggstr"
+
+[deps]
+
+source_file="res://Music/News_Theme_2.ogg"
+dest_files=[ "res://.import/News_Theme_2.ogg-56903591a0c4769bc49d14f5cec88cbf.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
