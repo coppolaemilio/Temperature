@@ -1,9 +1,9 @@
 extends Node
 
 var cities = [
-	'Berlin', 'New York City', 'San Francisco', 'Miami', 'Seattle', 'Toronto',
+	'Berlin', 'New York', 'San Francisco', 'Miami', 'Seattle', 'Toronto',
 	'Mexico City', 'Rio De Janeiro', 'Buenos Aires', 'Cape Town', 'Stockholm',
-	'Marrakech', 'Oslo', 'Helsinki', 'Tallin', 'Riga', 'Vilnius', 'Munich',
+	'Marrakech', 'Oslo', 'Helsinki', 'Riga', 'Vilnius', 'Munich',
 	'Amsterdam', 'Mumbai', 'Beijing', 'Tokyo', 'Osaka', 'Cairo', 'Istanbul',
 	'Lagos', 'Moscow', 'Paris', 'Jakarta', 'London', 'Bangalore', 'Lima',
 	'Seoul', 'Bogota', 'Johannesburg', 'Bangkok', 'Chicago', 'Tehran',
@@ -12,6 +12,8 @@ var cities = [
 	'Dublin', 'Lisbon', 'Rome', 'Zurich', 'Vienna', 'Prague', 'Warsaw', 'Kyoto',
 	'Sydney', 'Havana', 'Brasilia'
 ]
+
+
 
 var news = [
 	'It seems like Bitcoin is up!',
