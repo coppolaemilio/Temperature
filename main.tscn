@@ -398,7 +398,7 @@ bus = "Master"
 position = Vector2( 512, 300 )
 frames = SubResource( 6 )
 animation = "default"
-frame = 5
+frame = 3
 playing = true
 
 [node name="HTTPRequest" type="HTTPRequest" parent="." index="3"]
@@ -642,6 +642,7 @@ margin_right = 135.0
 
 frames = SubResource( 8 )
 animation = "default"
+frame = 7
 playing = true
 centered = false
 script = ExtResource( 103 )
@@ -816,7 +817,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 frames = SubResource( 7 )
 animation = "default"
-frame = 64
+frame = 66
 playing = true
 centered = false
 __meta__ = {
@@ -828,7 +829,7 @@ __meta__ = {
 visible = false
 frames = SubResource( 9 )
 animation = "default"
-frame = 16
+frame = 22
 playing = true
 centered = false
 __meta__ = {
@@ -861,7 +862,6 @@ _sections_unfolded = [ "custom_fonts" ]
 [node name="IntroSlide" type="Control" parent="." index="14"]
 
 editor/display_folded = true
-visible = false
 modulate = Color( 0.449219, 1, 0.922546, 1 )
 anchor_left = 0.0
 anchor_top = 0.0

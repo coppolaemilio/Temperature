@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Temperature"
+config/name="The Weather Guy"
 run/main_scene="res://main.tscn"
 config/icon="res://icon.png"
 

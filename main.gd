@@ -13,6 +13,7 @@ var answer_scene = load("res://Scenes/Answer.tscn")
 var time_dict = OS.get_time();
 var game_ended = false
 var sound = true
+var game_started = false
 
 func complete_time(number):
 	if number < 10:
@@ -99,6 +100,9 @@ func add_answer(city, value, real, color):
 	get_node('ScoreList').add_child(scene_instance)
 
 func _input(event):
+	if game_started:
+		return false
+
 	if event.is_action_pressed("ui_accept"):
 		if game_ended:
 			get_tree().reload_current_scene()
