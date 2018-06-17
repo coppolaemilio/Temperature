@@ -40,11 +40,12 @@ func _on_ShowUp_animation_finished():
 	$Hand/Stay.play('default')
 
 func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		if text_index == 0:
-			$Hand/Stay/Label.visible = false
-			$Hand/Stay/Label2.visible = true
-			text_index += 1
-		elif text_index == 1:
-			get_tree().change_scene("res://main.tscn")
+	if $Hand/Stay.visible == true:
+		if event.is_action_pressed("ui_accept"):
+			if text_index == 0:
+				$Hand/Stay/Label.visible = false
+				$Hand/Stay/Label2.visible = true
+				text_index += 1
+			elif text_index == 1:
+				get_tree().change_scene("res://main.tscn")
 

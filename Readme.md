@@ -18,15 +18,22 @@ Made by Emilio Coppola
 Andre Mari Coppola https://www.behance.net/maxandremad90d
 
 ## Sounds
+
 `yay.wav` by Higgs01 https://freesound.org/people/Higgs01/sounds/428156/
 
 `error.wav` by Autistic Lucario https://freesound.org/people/Autistic%20Lucario/sounds/142608/
 
 `positive_beeps.wav` by themusicalnomad https://freesound.org/people/themusicalnomad/sounds/253887/
 
+`paper flip 2.wav` by gynation https://freesound.org/people/gynation/sounds/82378/
+
+All found via https://freesound.org.
+
 ## Music
 
 `News Theme 2` by Audionautix is licensed under a Creative Commons Attribution license (https://creativecommons.org/licenses/by/4.0/)
 Artist: http://audionautix.com/
 
-`See You Soon` by Otis McDonald http://www.otismacmusic.com/ 
+`See You Soon` by Otis McDonald http://www.otismacmusic.com/
+
+Thanks to the [YouTube Audio Library](https://www.youtube.com/audiolibrary/music).
