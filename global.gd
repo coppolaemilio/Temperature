@@ -1,5 +1,7 @@
 extends Node
 
+var remote_data = {}
+
 var cities = [
 	'Berlin', 'New York', 'San Francisco', 'Miami', 'Seattle', 'Toronto',
 	'Mexico City', 'Rio De Janeiro', 'Buenos Aires', 'Cape Town', 'Stockholm',

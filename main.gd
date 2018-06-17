@@ -7,7 +7,7 @@ var cities_size = global.cities.size()
 var city_index = 0
 var city_limit = 13 # How many cities to show
 var headlines_width = 0 # it gest calculated in the _ready() function
-var remote_data = ''
+var remote_data = global.remote_data
 var score = 0
 var answer_scene = load("res://Scenes/Answer.tscn")
 var time_dict = OS.get_time();
@@ -29,10 +29,12 @@ func shuffle_list(list):
         index_list.remove(x)
     return shuffled_list
 
+
+
 func _ready():
 	randomize()
 	$Music/Intro.play()
-	$HTTPRequest.request("https://coppolaemilio.com/Temperature/data.json",PoolStringArray(), false)
+	$IntroSlide/Intro.play('default')
 	
 	# Making default states
 	$Weather/Temperature.text = BLANK_INPUT
@@ -54,11 +56,7 @@ func _ready():
 	
 	# Set the headlines width
 	headlines_width = $News/Headlines.get_total_character_count() * 13
-	
 
-func _on_HTTPRequest_request_completed( result, response_code, headers, body ):
-	var json = JSON.parse(body.get_string_from_utf8())
-	remote_data = json.result
 
 func _on_Intro_Music_finished():
 	$Music/Background.play()

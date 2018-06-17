@@ -1,0 +1,304 @@
+[gd_scene load_steps=57 format=2]
+
+[ext_resource path="res://NoteScene.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/note_bg/note_bg_00000.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/note_bg/note_bg_00001.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/note_bg/note_bg_00002.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/note_bg/note_bg_00003.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/note_bg/note_bg_00004.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/note_bg/note_bg_00005.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/note_bg/note_bg_00006.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/note_bg/note_bg_00007.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/note_bg/note_bg_00008.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/note_bg/note_bg_00009.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/note_bg/note_bg_00010.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/note_anim/note_anim_00000.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/note_anim/note_anim_00001.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/note_anim/note_anim_00002.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/note_anim/note_anim_00003.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/note_anim/note_anim_00004.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/note_anim/note_anim_00005.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/note_anim/note_anim_00006.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/note_anim/note_anim_00007.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/note_anim/note_anim_00008.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/note_anim/note_anim_00009.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/note_anim/note_anim_00010.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/note_anim/note_anim_00011.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/note_anim/note_anim_00012.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/note_anim/note_anim_00013.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/note_anim/note_anim_00014.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/note_anim/note_anim_00015.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/note_anim/note_anim_00016.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/note_anim/note_anim_00017.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/note_stay/note_stay_00021.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/note_stay/note_stay_00022.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/note_stay/note_stay_00023.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/note_stay/note_stay_00024.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/note_stay/note_stay_00025.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/note_stay/note_stay_00026.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/note_stay/note_stay_00027.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/note_stay/note_stay_00028.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/note_stay/note_stay_00029.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/note_stay/note_stay_00030.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/note_stay/note_stay_00031.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/note_stay/note_stay_00032.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/note_stay/note_stay_00033.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/note_stay/note_stay_00034.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/note_stay/note_stay_00035.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/note_stay/note_stay_00036.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/note_stay/note_stay_00037.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/note_stay/note_stay_00038.png" type="Texture" id=48]
+[ext_resource path="res://Fonts/Roboto/Roboto-Medium.ttf" type="DynamicFontData" id=49]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 39
+use_mipmaps = false
+use_filter = true
+extra_spacing_top = 3
+extra_spacing_bottom = 3
+extra_spacing_char = -1
+font_data = ExtResource( 49 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "text"
+length = 1.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.95, 1.0 ]
+}
+
+[sub_resource type="Animation" id=7]
+
+resource_name = "text"
+length = 1.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.95, 1.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "FadeIn"
+length = 2.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.207843, 0.184314, 0.180392, 1 ), Color( 0.207843, 0.184314, 0.180392, 0 ) ]
+}
+
+[node name="Node" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Background" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "default"
+frame = 10
+playing = true
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hand" type="Node" parent="." index="1"]
+
+[node name="ShowUp" type="AnimatedSprite" parent="Hand" index="0"]
+
+visible = false
+frames = SubResource( 3 )
+animation = "default"
+frame = 2
+centered = false
+
+[node name="Stay" type="AnimatedSprite" parent="Hand" index="1"]
+
+frames = SubResource( 4 )
+animation = "default"
+frame = 3
+playing = true
+centered = false
+
+[node name="Label" type="Label" parent="Hand/Stay" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 164.0
+margin_top = 91.0
+margin_right = 857.0
+margin_bottom = 536.0
+rect_rotation = 0.95
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.207843, 0.184314, 0.180392, 1 )
+text = "Dear Weather Guy:
+The screen that displays the real temperatures is not working. But since you are an expert you don't really need it. Right?
+
+Press Enter"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hand/Stay/Label" index="0"]
+
+root_node = NodePath("..")
+autoplay = "text"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 5.0
+anims/text = SubResource( 6 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="Label2" type="Label" parent="Hand/Stay" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 164.0
+margin_top = 91.0
+margin_right = 857.0
+margin_bottom = 536.0
+rect_rotation = 0.975432
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.207843, 0.184314, 0.180392, 1 )
+text = "You will see the name of a city and you wil have to say the REAL temperature for that city IN REAL LIFE RIGHT AT THIS MOMENT.
+
+By the way, we are live 
+in 10 seconds."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hand/Stay/Label2" index="0"]
+
+root_node = NodePath("..")
+autoplay = "text"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 5.0
+anims/text = SubResource( 7 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="ColorRect" type="ColorRect" parent="." index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.207843, 0.184314, 0.180392, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" index="0"]
+
+root_node = NodePath("..")
+autoplay = "FadeIn"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/FadeIn = SubResource( 2 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." index="3"]
+
+download_file = ""
+use_threads = false
+body_size_limit = -1
+max_redirects = 8
+
+[connection signal="animation_finished" from="Hand/ShowUp" to="." method="_on_ShowUp_animation_finished"]
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+
+
