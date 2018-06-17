@@ -22,6 +22,11 @@ var news = [
 	'A natural disaster happened very far from your home',
 	'Bitcoin crashed',
 	'Supreme Court rules against memes',
-	'Country full of emigrants is not accepting inmigrants',
+	'Country full of emigrants is not accepting immigrants',
 	'A very old superhero gets its own movie',
+	'Godot finally dominates the entire gaming market',
+	'There is a new song that everybody hates',
+	'Noble inaugurates place',
+	'Dogs earn the right to walk humans again',
+	'Why are you reading this?',
 ]

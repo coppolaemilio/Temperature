@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/error.wav-5c5bf566dec066793e94ed5f1add1763.sample"
+
+[deps]
+
+source_file="res://Sound/error.wav"
+dest_files=[ "res://.import/error.wav-5c5bf566dec066793e94ed5f1add1763.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,10 +1,258 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=243 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://Music/News_Theme_2.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Music/See_you_Soon.ogg" type="AudioStream" id=3]
-[ext_resource path="res://Fonts/Roboto/Roboto-Medium.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Fonts/Roboto.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Sound/yay.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sound/error.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sound/positive-beeps.wav" type="AudioStream" id=6]
+[ext_resource path="res://Sprites/bg_stand/bg_stand_00000.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/bg_stand/bg_stand_00001.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/bg_stand/bg_stand_00002.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/bg_stand/bg_stand_00003.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/bg_stand/bg_stand_00004.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/bg_stand/bg_stand_00005.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/bg_stand/bg_stand_00006.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/bg_stand/bg_stand_00007.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/bg_stand/bg_stand_00008.png" type="Texture" id=15]
+[ext_resource path="res://Fonts/Roboto/Roboto-Medium.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://Scenes/Answer.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Sprites/cam_stand/cam_stand_00000.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/cam_stand/cam_stand_00001.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/cam_stand/cam_stand_00002.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/cam_stand/cam_stand_00003.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/cam_stand/cam_stand_00004.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/cam_stand/cam_stand_00005.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/cam_stand/cam_stand_00006.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/cam_stand/cam_stand_00007.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/cam_stand/cam_stand_00008.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00009.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00010.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00011.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00012.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00013.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00014.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00015.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00016.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00017.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00018.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00019.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00020.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00021.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00022.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00023.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00024.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00025.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00026.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00027.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00028.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00029.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00030.png" type="Texture" id=48]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00031.png" type="Texture" id=49]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00032.png" type="Texture" id=50]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00033.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00034.png" type="Texture" id=52]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00035.png" type="Texture" id=53]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00036.png" type="Texture" id=54]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00037.png" type="Texture" id=55]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00038.png" type="Texture" id=56]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00039.png" type="Texture" id=57]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00040.png" type="Texture" id=58]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00041.png" type="Texture" id=59]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00042.png" type="Texture" id=60]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00043.png" type="Texture" id=61]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00044.png" type="Texture" id=62]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00045.png" type="Texture" id=63]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00046.png" type="Texture" id=64]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00047.png" type="Texture" id=65]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00048.png" type="Texture" id=66]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00049.png" type="Texture" id=67]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00050.png" type="Texture" id=68]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00051.png" type="Texture" id=69]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00052.png" type="Texture" id=70]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00053.png" type="Texture" id=71]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00054.png" type="Texture" id=72]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00055.png" type="Texture" id=73]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00056.png" type="Texture" id=74]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00057.png" type="Texture" id=75]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00058.png" type="Texture" id=76]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00059.png" type="Texture" id=77]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00060.png" type="Texture" id=78]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00061.png" type="Texture" id=79]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00062.png" type="Texture" id=80]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00063.png" type="Texture" id=81]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00064.png" type="Texture" id=82]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00065.png" type="Texture" id=83]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00066.png" type="Texture" id=84]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00067.png" type="Texture" id=85]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00068.png" type="Texture" id=86]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00069.png" type="Texture" id=87]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00070.png" type="Texture" id=88]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00071.png" type="Texture" id=89]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00072.png" type="Texture" id=90]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00073.png" type="Texture" id=91]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00074.png" type="Texture" id=92]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00075.png" type="Texture" id=93]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00076.png" type="Texture" id=94]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00077.png" type="Texture" id=95]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00078.png" type="Texture" id=96]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00079.png" type="Texture" id=97]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00080.png" type="Texture" id=98]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00081.png" type="Texture" id=99]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00082.png" type="Texture" id=100]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00083.png" type="Texture" id=101]
+[ext_resource path="res://Sprites/cam_fail/cam_fail_00084.png" type="Texture" id=102]
+[ext_resource path="res://CameraOperator.gd" type="Script" id=103]
+[ext_resource path="res://Fonts/Roboto.tres" type="DynamicFont" id=104]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00000.png" type="Texture" id=105]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00001.png" type="Texture" id=106]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00002.png" type="Texture" id=107]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00003.png" type="Texture" id=108]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00004.png" type="Texture" id=109]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00005.png" type="Texture" id=110]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00006.png" type="Texture" id=111]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00007.png" type="Texture" id=112]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00008.png" type="Texture" id=113]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00009.png" type="Texture" id=114]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00010.png" type="Texture" id=115]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00011.png" type="Texture" id=116]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00012.png" type="Texture" id=117]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00013.png" type="Texture" id=118]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00014.png" type="Texture" id=119]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00015.png" type="Texture" id=120]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00016.png" type="Texture" id=121]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00017.png" type="Texture" id=122]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00018.png" type="Texture" id=123]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00019.png" type="Texture" id=124]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00020.png" type="Texture" id=125]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00021.png" type="Texture" id=126]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00022.png" type="Texture" id=127]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00023.png" type="Texture" id=128]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00024.png" type="Texture" id=129]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00025.png" type="Texture" id=130]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00026.png" type="Texture" id=131]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00027.png" type="Texture" id=132]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00028.png" type="Texture" id=133]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00029.png" type="Texture" id=134]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00030.png" type="Texture" id=135]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00031.png" type="Texture" id=136]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00032.png" type="Texture" id=137]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00033.png" type="Texture" id=138]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00034.png" type="Texture" id=139]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00035.png" type="Texture" id=140]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00036.png" type="Texture" id=141]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00037.png" type="Texture" id=142]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00038.png" type="Texture" id=143]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00039.png" type="Texture" id=144]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00040.png" type="Texture" id=145]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00041.png" type="Texture" id=146]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00042.png" type="Texture" id=147]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00043.png" type="Texture" id=148]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00044.png" type="Texture" id=149]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00045.png" type="Texture" id=150]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00046.png" type="Texture" id=151]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00047.png" type="Texture" id=152]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00048.png" type="Texture" id=153]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00049.png" type="Texture" id=154]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00050.png" type="Texture" id=155]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00051.png" type="Texture" id=156]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00052.png" type="Texture" id=157]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00053.png" type="Texture" id=158]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00054.png" type="Texture" id=159]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00055.png" type="Texture" id=160]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00056.png" type="Texture" id=161]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00057.png" type="Texture" id=162]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00058.png" type="Texture" id=163]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00059.png" type="Texture" id=164]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00060.png" type="Texture" id=165]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00061.png" type="Texture" id=166]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00062.png" type="Texture" id=167]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00063.png" type="Texture" id=168]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00064.png" type="Texture" id=169]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00065.png" type="Texture" id=170]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00066.png" type="Texture" id=171]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00067.png" type="Texture" id=172]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00068.png" type="Texture" id=173]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00069.png" type="Texture" id=174]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00070.png" type="Texture" id=175]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00071.png" type="Texture" id=176]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00072.png" type="Texture" id=177]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00073.png" type="Texture" id=178]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00074.png" type="Texture" id=179]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00075.png" type="Texture" id=180]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00076.png" type="Texture" id=181]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00077.png" type="Texture" id=182]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00078.png" type="Texture" id=183]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00079.png" type="Texture" id=184]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00080.png" type="Texture" id=185]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00081.png" type="Texture" id=186]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00082.png" type="Texture" id=187]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00083.png" type="Texture" id=188]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00084.png" type="Texture" id=189]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00085.png" type="Texture" id=190]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00086.png" type="Texture" id=191]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00087.png" type="Texture" id=192]
+[ext_resource path="res://Sprites/weather_man_stand/weather_man_stand_00088.png" type="Texture" id=193]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00126.png" type="Texture" id=194]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00127.png" type="Texture" id=195]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00128.png" type="Texture" id=196]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00129.png" type="Texture" id=197]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00130.png" type="Texture" id=198]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00131.png" type="Texture" id=199]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00132.png" type="Texture" id=200]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00133.png" type="Texture" id=201]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00134.png" type="Texture" id=202]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00135.png" type="Texture" id=203]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00136.png" type="Texture" id=204]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00137.png" type="Texture" id=205]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00138.png" type="Texture" id=206]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00139.png" type="Texture" id=207]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00140.png" type="Texture" id=208]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00141.png" type="Texture" id=209]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00142.png" type="Texture" id=210]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00143.png" type="Texture" id=211]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00144.png" type="Texture" id=212]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00145.png" type="Texture" id=213]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00146.png" type="Texture" id=214]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00147.png" type="Texture" id=215]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00148.png" type="Texture" id=216]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00149.png" type="Texture" id=217]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00150.png" type="Texture" id=218]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00151.png" type="Texture" id=219]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00152.png" type="Texture" id=220]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00153.png" type="Texture" id=221]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00154.png" type="Texture" id=222]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00155.png" type="Texture" id=223]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00156.png" type="Texture" id=224]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00157.png" type="Texture" id=225]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00158.png" type="Texture" id=226]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00159.png" type="Texture" id=227]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00160.png" type="Texture" id=228]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00161.png" type="Texture" id=229]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00162.png" type="Texture" id=230]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00163.png" type="Texture" id=231]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00164.png" type="Texture" id=232]
+[ext_resource path="res://Sprites/weather_man_fail/weather_man_fail_00165.png" type="Texture" id=233]
+
+[sub_resource type="SpriteFrames" id=6]
+
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 9
+use_mipmaps = true
+use_filter = true
+extra_spacing_top = 3
+extra_spacing_bottom = 3
+extra_spacing_char = 1
+font_data = ExtResource( 16 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -14,7 +262,7 @@ use_filter = true
 extra_spacing_top = 3
 extra_spacing_bottom = 3
 extra_spacing_char = 1
-font_data = ExtResource( 4 )
+font_data = ExtResource( 16 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -25,8 +273,51 @@ use_filter = true
 extra_spacing_top = 3
 extra_spacing_bottom = 3
 extra_spacing_char = 1
-font_data = ExtResource( 4 )
+font_data = ExtResource( 16 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 24
+use_mipmaps = false
+use_filter = true
+extra_spacing_top = 3
+extra_spacing_bottom = 3
+extra_spacing_char = 1
+font_data = ExtResource( 16 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="SpriteFrames" id=8]
+
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ) ],
+"loop": true,
+"name": "fail",
+"speed": 30.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+
+animations = [ {
+"frames": [ ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ), ExtResource( 185 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 188 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+
+animations = [ {
+"frames": [ ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 211 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 214 ), ExtResource( 215 ), ExtResource( 216 ), ExtResource( 217 ), ExtResource( 218 ), ExtResource( 219 ), ExtResource( 220 ), ExtResource( 221 ), ExtResource( 222 ), ExtResource( 223 ), ExtResource( 224 ), ExtResource( 225 ), ExtResource( 226 ), ExtResource( 227 ), ExtResource( 228 ), ExtResource( 229 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 232 ), ExtResource( 233 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
 
 [sub_resource type="Animation" id=3]
 
@@ -73,50 +364,185 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[node name="ColorRect" type="ColorRect" parent="." index="1"]
+[node name="Sound" type="Node" parent="." index="1"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1024.0
-margin_bottom = 600.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-color = Color( 1, 1, 1, 1 )
-_sections_unfolded = [ "Rect" ]
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="yay" type="AudioStreamPlayer" parent="Sound" index="0"]
 
-[node name="HTTPRequest" type="HTTPRequest" parent="." index="2"]
+stream = ExtResource( 4 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="error" type="AudioStreamPlayer" parent="Sound" index="1"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="positive" type="AudioStreamPlayer" parent="Sound" index="2"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="bg_placeholder-01" type="AnimatedSprite" parent="." index="2"]
+
+position = Vector2( 512, 300 )
+frames = SubResource( 6 )
+animation = "default"
+frame = 5
+playing = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." index="3"]
 
 download_file = ""
 use_threads = false
 body_size_limit = -1
 max_redirects = 8
 
-[node name="Weather" type="Control" parent="." index="3"]
+[node name="Credits" type="Label" parent="." index="4"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 213.0
-margin_top = 91.0
-margin_right = 792.0
-margin_bottom = 437.0
+margin_left = 296.0
+margin_top = 575.0
+margin_right = 799.0
+margin_bottom = 614.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 0.381216 )
+text = "A game made by Emilio Coppola. Art by Andre Mari Coppola. Godot Community Game Jam - June 2018
+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="EndMessage" type="Control" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 61.0
+margin_top = 68.0
+margin_right = 583.0
+margin_bottom = 403.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+
+[node name="Title" type="Label" parent="EndMessage" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -9.0
+margin_top = 11.0
+margin_right = 528.0
+margin_bottom = 83.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.207843, 0.184314, 0.180392, 1 )
+text = "Your final score"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Score" type="Label" parent="EndMessage" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -9.0
+margin_top = 102.0
+margin_right = 528.0
+margin_bottom = 261.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.929412, 0.729412, 0.462745, 1 )
+text = "1050"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Restart" type="Label" parent="EndMessage" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -9.0
+margin_top = 240.0
+margin_right = 528.0
+margin_bottom = 312.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.929412, 0.729412, 0.462745, 1 )
+text = "Press [ENTER] to restart"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Weather" type="Control" parent="." index="6"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 208.0
+margin_top = 80.0
+margin_right = 578.0
+margin_bottom = 428.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
 
 [node name="CityName" type="Label" parent="Weather" index="0"]
 
@@ -134,15 +560,12 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.207843, 0.184314, 0.180392, 1 )
 text = "Berlin"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Temperature" type="Label" parent="Weather" index="1"]
 
@@ -160,15 +583,12 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.207843, 0.184314, 0.180392, 1 )
 text = "32"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "custom_colors", "custom_fonts" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Celcius" type="Label" parent="Weather" index="2"]
 
@@ -187,17 +607,49 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.929412, 0.729412, 0.462745, 1 )
 text = "°C"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="ScoreList" type="VBoxContainer" parent="." index="7"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 61.0
+margin_top = 68.0
+margin_right = 196.0
+margin_bottom = 405.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Answer" parent="ScoreList" index="0" instance=ExtResource( 17 )]
+
+editor/display_folded = true
+margin_right = 135.0
+
+[node name="CameraOperator" type="AnimatedSprite" parent="." index="8"]
+
+frames = SubResource( 8 )
+animation = "default"
+playing = true
+centered = false
+script = ExtResource( 103 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Time" type="Control" parent="." index="4"]
+[node name="Time" type="Control" parent="." index="9"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -205,9 +657,8 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 897.0
-margin_top = 467.0
 margin_right = 1024.0
-margin_bottom = 513.0
+margin_bottom = 46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -233,7 +684,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 0.289063, 0.289063, 0.289063, 1 )
+color = Color( 0.568627, 0.447059, 0.403922, 1 )
 
 [node name="Title" type="Label" parent="Time" index="1"]
 
@@ -251,7 +702,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 104 )
 text = "22:03:12"
 align = 1
 uppercase = true
@@ -260,7 +711,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="News" type="Control" parent="." index="5"]
+[node name="News" type="Control" parent="." index="10"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -294,7 +745,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 0.445313, 0.570984, 1, 1 )
+color = Color( 0.537255, 0.603922, 0.556863, 1 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="Headlines" type="Label" parent="News" index="1"]
@@ -313,7 +764,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 104 )
 text = "Current temperature"
 uppercase = true
 percent_visible = 1.0
@@ -335,7 +786,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 0.289063, 0.289063, 0.289063, 1 )
+color = Color( 0.568627, 0.447059, 0.403922, 1 )
 
 [node name="Title" type="Label" parent="News" index="3"]
 
@@ -343,9 +794,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 25.0
 margin_top = 9.0
-margin_right = 86.0
+margin_right = 106.0
 margin_bottom = 41.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -353,74 +803,65 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
-text = "News"
+custom_fonts/font = ExtResource( 104 )
+text = "Live"
+align = 1
 uppercase = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="ScoreList" type="VBoxContainer" parent="." index="6"]
+[node name="WeatherGuy" type="AnimatedSprite" parent="." index="11"]
 
+frames = SubResource( 7 )
+animation = "default"
+frame = 64
+playing = true
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="WeatherGuyFail" type="AnimatedSprite" parent="." index="12"]
+
+visible = false
+frames = SubResource( 9 )
+animation = "default"
+frame = 16
+playing = true
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ScoreLabel" type="Label" parent="." index="13"]
+
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 27.0
-margin_top = 85.0
-margin_right = 190.0
-margin_bottom = 490.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="Control" type="Container" parent="ScoreList" index="0"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 163.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 0, 40 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Grow Direction", "Rect" ]
-
-[node name="Label" type="Label" parent="ScoreList/Control" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 163.0
-margin_bottom = 32.0
+margin_left = 882.0
+margin_top = 24.0
+margin_right = 952.0
+margin_bottom = 56.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Berlin "
+text = "Score: 0"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Material", "Rect", "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "custom_fonts" ]
 
-[node name="Control" type="Control" parent="." index="7"]
+[node name="IntroSlide" type="Control" parent="." index="14"]
 
+editor/display_folded = true
+visible = false
 modulate = Color( 0.449219, 1, 0.922546, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
@@ -436,7 +877,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Visibility" ]
 
-[node name="ColorRect2" type="ColorRect" parent="Control" index="0"]
+[node name="ColorRect2" type="ColorRect" parent="IntroSlide" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -451,7 +892,7 @@ size_flags_vertical = 1
 color = Color( 0.21582, 0.60273, 0.8125, 1 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Control" index="1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="IntroSlide" index="1"]
 
 root_node = NodePath("..")
 autoplay = "FadeOut"
