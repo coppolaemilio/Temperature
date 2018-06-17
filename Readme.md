@@ -1,8 +1,12 @@
 # The Weather Guy
 
+Dear Weather Guy:
+The screen that displays the real temperatures is not working. But since you are an expert you don't really need it. Right?
+You will see the name of a city and you wil have to say the **REAL** temperature for that city **IN REAL LIFE RIGHT AT THIS MOMENT**.
+
+By the way, we are live in 10 seconds.
+
 ## About the game:
-The screen that displays the real temperatures is not working. But since you are an expert you will be able to get them on point. Right? By the way, we are live in 10 seconds.
-(The weather information )
 
 Game created for [Godot Community Game Jam - June 2018](https://itch.io/jam/godotjam062018). 
 
