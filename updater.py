@@ -1,6 +1,7 @@
 import time
 import os
 
-#os.system('python weather.py')
-#time.sleep(60)
-os.system('lazygit "updating data"')
+while True:
+  os.system('python weather.py')
+  os.system('lazygit "updating data"')
+  time.sleep(60)
