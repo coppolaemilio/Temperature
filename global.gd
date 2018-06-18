@@ -2,6 +2,7 @@ extends Node
 
 var remote_data = {}
 var best_score = 0
+var unit = 'c'
 
 var cities = [
 	'Berlin', 'New York', 'San Francisco', 'Miami', 'Seattle', 'Toronto',
@@ -120,3 +121,7 @@ var news = [
 	# 'The Steam platform to only accept games with a battle royal multiplayer mode',
 	# 'Twenty million people injured after heated debate on toilet\'s paper rolling direction',
 ]
+
+func _input(event):
+	if event.is_action_pressed('ui_cancel'):
+		get_tree().quit()

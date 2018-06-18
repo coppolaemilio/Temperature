@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://NoteScene.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/note_bg/note_bg_00000.png" type="Texture" id=2]
@@ -48,7 +48,7 @@
 [ext_resource path="res://Sprites/note_stay/note_stay_00036.png" type="Texture" id=46]
 [ext_resource path="res://Sprites/note_stay/note_stay_00037.png" type="Texture" id=47]
 [ext_resource path="res://Sprites/note_stay/note_stay_00038.png" type="Texture" id=48]
-[ext_resource path="res://Fonts/Roboto/Roboto-Medium.ttf" type="DynamicFontData" id=49]
+[ext_resource path="res://Scenes/TextOnHand.tscn" type="PackedScene" id=49]
 [ext_resource path="res://Sound/paper.wav" type="AudioStream" id=50]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -78,55 +78,6 @@ animations = [ {
 "speed": 30.0
 } ]
 
-[sub_resource type="DynamicFont" id=5]
-
-size = 39
-use_mipmaps = false
-use_filter = true
-extra_spacing_top = 3
-extra_spacing_bottom = 3
-extra_spacing_char = -1
-font_data = ExtResource( 49 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
-
-[sub_resource type="Animation" id=6]
-
-resource_name = "text"
-length = 1.0
-loop = true
-step = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_rotation")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.95, 1.0 ]
-}
-
-[sub_resource type="Animation" id=7]
-
-resource_name = "text"
-length = 1.0
-loop = true
-step = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_rotation")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.95, 1.0 ]
-}
-
 [sub_resource type="Animation" id=2]
 
 resource_name = "FadeIn"
@@ -154,7 +105,7 @@ script = ExtResource( 1 )
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 4
+frame = 8
 playing = true
 centered = false
 __meta__ = {
@@ -175,90 +126,19 @@ centered = false
 
 frames = SubResource( 4 )
 animation = "default"
-frame = 11
+frame = 6
 playing = true
 centered = false
 
-[node name="Label" type="Label" parent="Hand/Stay" index="0"]
+[node name="Label" parent="Hand/Stay" index="0" instance=ExtResource( 49 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 164.0
-margin_top = 91.0
-margin_right = 857.0
-margin_bottom = 536.0
-rect_rotation = 0.95
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0.207843, 0.184314, 0.180392, 1 )
-text = "Dear Weather Guy:
-The screen that displays the real temperatures is not working. But since you are an expert you don't really need it. Right?
-
-Press Enter"
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Hand/Stay/Label" index="0"]
-
-root_node = NodePath("..")
-autoplay = "text"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 5.0
-anims/text = SubResource( 6 )
-blend_times = [  ]
-_sections_unfolded = [ "Playback Options" ]
-
-[node name="Label2" type="Label" parent="Hand/Stay" index="1"]
+[node name="Label2" parent="Hand/Stay" index="1" instance=ExtResource( 49 )]
 
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 164.0
-margin_top = 91.0
-margin_right = 857.0
-margin_bottom = 536.0
-rect_rotation = 0.995279
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0.207843, 0.184314, 0.180392, 1 )
 text = "You will see the name of a city and you wil have to say the REAL temperature for that city IN REAL LIFE RIGHT AT THIS MOMENT.
 
 By the way, we are live 
 in 10 seconds."
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Hand/Stay/Label2" index="0"]
-
-root_node = NodePath("..")
-autoplay = "text"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 5.0
-anims/text = SubResource( 7 )
-blend_times = [  ]
-_sections_unfolded = [ "Playback Options" ]
 
 [node name="ColorRect" type="ColorRect" parent="." index="2"]
 

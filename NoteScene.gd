@@ -34,6 +34,11 @@ func _process(delta):
 func _on_HTTPRequest_request_completed( result, response_code, headers, body ):
 	var json = JSON.parse(body.get_string_from_utf8())
 	global.remote_data = json.result
+	
+	if global.unit == 'f':
+		for val in global.remote_data:
+			var celcius = global.remote_data[val]
+			global.remote_data[val] = round(9.0/5.0 * celcius + 32)
 
 func _on_ShowUp_animation_finished():
 	if sound_played == 0:

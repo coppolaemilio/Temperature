@@ -21,8 +21,19 @@ var answer_messages = {
 }
 var time_dict = OS.get_time();
 var game_ended = false
-var sound = true
 var game_started = false
+var show_hand = false
+var sound = true
+var intro_finished = false
+var intro_timer = 530
+
+var note_text = {
+	'fired': 'You are fired. But first, we have another broadcast in ten seconds so, lets get this over with.',
+	'bad': 'That was bad, but at least you tried... We have another broadcast in ten seconds so, hang in there.',
+	'good': 'Ok, close enough! Congratulations, you keep your job! We have another broadcast in ten seconds so stay focused!',
+	'verygood': 'Very good! You see? These screens are overrated. Ok, we have another broadcast in ten seconds so, keep doing what you do best.',
+	'perfect': 'That was perfect! We will get rid of the screens moving forward, we will save a lot of money! We have another broadcast in ten seconds. Go get them champ!'
+}
 
 func complete_time(number):
 	if number < 10:
@@ -51,7 +62,15 @@ func _ready():
 	$ScoreList/Answer.visible = false
 	$Weather.visible = true
 	$EndMessage.visible = false
+	$Hand.visible = false
 	$BestScore/Score.text = str(global.best_score)
+	
+	if global.unit == 'f':
+		$Weather/F.visible = true
+		$Weather/C.visible = false
+	else:
+		$Weather/C.visible = true
+		$Weather/F.visible = false
 	
 	# Creating headlines string
 	var news_text = ''
@@ -72,6 +91,12 @@ func _on_Intro_Music_finished():
 	$Music/Background.play()
 
 func _process(delta):
+	# Limit input of player while animation
+	if intro_finished == false:
+		if intro_timer < 0:
+			intro_finished = true
+		else:
+			intro_timer -= 1
 	# Current time
 	var time_dict = OS.get_time();
 	$Time/Title.text = (
@@ -130,14 +155,22 @@ func add_answer(city, value, real, color, kind):
 
 func choose(array):
 	return array[randi() % array.size()]
-
+	
 func _input(event):
+	if intro_finished == false:
+		return false
 	if game_started:
 		return false
 
 	if event.is_action_pressed("ui_accept"):
 		if game_ended:
-			get_tree().reload_current_scene()
+			if show_hand == false:
+				show_hand = true
+				$Hand.visible = true
+				$Sound/paper.play()
+				return
+			elif show_hand:
+				get_tree().reload_current_scene()
 		if city_index <= city_limit:
 			var answer = $Weather/Temperature.text.replace(' ', '')
 			var value = remote_data[cities[city_index]]
@@ -198,12 +231,22 @@ func _input(event):
 			$Weather/CityName.text = cities[city_index]
 			if city_index + 1 == city_limit:
 				city_index += 1
+				$Weather/CityName.text = cities[city_index]
 		if city_index > city_limit:
 			$Weather.visible = false
 			$EndMessage.visible = true
 			$ScoreList.visible = true
+			if score >= 1000 and score <= 1500 :
+				$Hand/Stay/Label.text = note_text['bad']
+			if score >= 1500 and score <= 2500 :
+				$Hand/Stay/Label.text = note_text['good']
+			if score >= 2500 and score <= 3500 :
+				$Hand/Stay/Label.text = note_text['verygood']
+			if score > 11000:
+				$Hand/Stay/Label.text = note_text['perfect']
 			if score < 1000:
 				$Sound/boo.play()
+				$Hand/Stay/Label.text = note_text['fired']
 			else:
 				$Sound/cheer.play()
 			if score > global.best_score:
