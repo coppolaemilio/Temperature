@@ -5,7 +5,7 @@ var BLANK_INPUT = '   '
 var cities = global.cities
 var cities_size = global.cities.size()
 var city_index = 0
-var city_limit = 13 # How many cities to show
+var city_limit = 12 # How many cities to show
 var headlines_width = 0 # it gest calculated in the _ready() function
 var remote_data = global.remote_data
 var score = 0
@@ -51,6 +51,7 @@ func _ready():
 	$ScoreList/Answer.visible = false
 	$Weather.visible = true
 	$EndMessage.visible = false
+	$BestScore/Score.text = str(global.best_score)
 	
 	# Creating headlines string
 	var news_text = ''
@@ -79,6 +80,11 @@ func _process(delta):
 		complete_time(time_dict.second)
 	)
 	
+	# Best score
+	if global.best_score == 0:
+		$BestScore.visible = false
+	else:
+		$BestScore.visible = true
 	# Moving headlines
 	$News/Headlines.rect_position[0] -= 1
 	if $News/Headlines.rect_position[0] < headlines_width * -1:
@@ -132,7 +138,7 @@ func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		if game_ended:
 			get_tree().reload_current_scene()
-		if city_index + 1 <= city_limit - 1:
+		if city_index <= city_limit:
 			var answer = $Weather/Temperature.text.replace(' ', '')
 			var value = remote_data[cities[city_index]]
 
@@ -145,23 +151,27 @@ func _input(event):
 			var kind = 'wrong'
 			if value == answer:
 				kind = 'perfect'
+				color = '#39d4d7'
 				score += 1000
 				$Sound/yay.play()
-				color= '#39d4d7'
 			elif value == answer - 1 or value == answer + 1:
-				kind ='almost'
+				kind = 'almost'
+				color = '#abd6bb'
 				score += 500
 				$Sound/positive.play()
 			elif value == answer - 2 or value == answer + 2:
 				kind = 'fair'
+				color = '#e1ca76'
 				score += 250
 				$Sound/positive.play()
 			elif value == answer - 3 or value == answer + 3:
 				kind = 'fair'
+				color = '#e1ca76'
 				score += 100
 				$Sound/positive.play()
 			elif value == answer - 4 or value == answer + 4:
 				kind = 'fair'
+				color = '#e1ca76'
 				score += 50
 				$Sound/positive.play()
 			else:
@@ -186,10 +196,19 @@ func _input(event):
 			$Weather/Temperature.text = BLANK_INPUT
 			city_index += 1
 			$Weather/CityName.text = cities[city_index]
-		else:
+			if city_index + 1 == city_limit:
+				city_index += 1
+		if city_index > city_limit:
 			$Weather.visible = false
 			$EndMessage.visible = true
-			$ScoreList.visible = false
+			$ScoreList.visible = true
+			if score < 1000:
+				$Sound/boo.play()
+			else:
+				$Sound/cheer.play()
+			if score > global.best_score:
+				global.best_score = score
+				$BestScore/Score.text = str(global.best_score)
 			game_ended = true
 
 	if event.is_action_pressed("ui_delete"):

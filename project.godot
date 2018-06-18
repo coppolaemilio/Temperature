@@ -18,6 +18,10 @@ config/icon="res://icon.png"
 
 global="*res://global.gd"
 
+[display]
+
+window/size/resizable=false
+
 [input]
 
 number_1=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":49,"unicode":0,"echo":false,"script":null)

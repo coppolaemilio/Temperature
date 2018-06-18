@@ -1,6 +1,7 @@
 extends Node
 
 var remote_data = {}
+var best_score = 0
 
 var cities = [
 	'Berlin', 'New York', 'San Francisco', 'Miami', 'Seattle', 'Toronto',
@@ -96,7 +97,7 @@ var news = [
 	'Godot finally dominates the entire gaming market',
 	'There is a new song that everybody hates',
 	'Noble inaugurates place',
-	'Dogs earn the right to walk humans again',
+	'Dogs earns the right to walk humans again',
 	'Why are you reading this?',
 	'Man walking dog abducted by UFO. Dog tells the story',
 	'Everyone goes crazy after some team wins at sport',

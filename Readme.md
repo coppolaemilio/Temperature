@@ -6,13 +6,7 @@ You will see the name of a city and you wil have to say the **REAL** temperature
 
 By the way, we are live in 10 seconds.
 
-## About the game:
-
 Game created for [Godot Community Game Jam - June 2018](https://itch.io/jam/godotjam062018). 
-
-If you want to generate the weather temperatures you should get an API key from https://openweathermap.org and store it inside a file named `settings` in the root of the dir. After getting a valid API key, you can run `python weather.py` and it will generate a `data.json` file that you can use for the game. Right now the default url for that data is set to this repo `data.json` file hosted using Github Pages.
-
-
 
 ## Code and game design
 Emilio Coppola https://coppolaemilio.com
@@ -30,6 +24,10 @@ Andre Mari Coppola https://www.behance.net/maxandremad90d
 
 `paper flip 2.wav` by gynation https://freesound.org/people/gynation/sounds/82378/
 
+`Cheer 2.wav` by jayfrosting https://freesound.org/people/jayfrosting/sounds/333404/
+
+`boo.wav` by dr_skitz https://freesound.org/people/dr_skitz/sounds/353925/
+
 All found via https://freesound.org.
 
 ## Music
@@ -40,3 +38,6 @@ Artist: http://audionautix.com/
 `See You Soon` by Otis McDonald http://www.otismacmusic.com/
 
 Thanks to the [YouTube Audio Library](https://www.youtube.com/audiolibrary/music).
+
+## Weather API
+Weather information provided by https://openweathermap.org
