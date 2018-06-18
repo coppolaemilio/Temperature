@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://NoteScene.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/note_bg/note_bg_00000.png" type="Texture" id=2]
@@ -49,6 +49,7 @@
 [ext_resource path="res://Sprites/note_stay/note_stay_00037.png" type="Texture" id=47]
 [ext_resource path="res://Sprites/note_stay/note_stay_00038.png" type="Texture" id=48]
 [ext_resource path="res://Fonts/Roboto/Roboto-Medium.ttf" type="DynamicFontData" id=49]
+[ext_resource path="res://Sound/paper.wav" type="AudioStream" id=50]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -153,6 +154,7 @@ script = ExtResource( 1 )
 
 frames = SubResource( 1 )
 animation = "default"
+frame = 4
 playing = true
 centered = false
 __meta__ = {
@@ -173,7 +175,7 @@ centered = false
 
 frames = SubResource( 4 )
 animation = "default"
-frame = 17
+frame = 11
 playing = true
 centered = false
 
@@ -228,7 +230,7 @@ margin_left = 164.0
 margin_top = 91.0
 margin_right = 857.0
 margin_bottom = 536.0
-rect_rotation = 0.997884
+rect_rotation = 0.995279
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -294,6 +296,17 @@ download_file = ""
 use_threads = false
 body_size_limit = -1
 max_redirects = 8
+
+[node name="Sound" type="Node" parent="." index="4"]
+
+[node name="Paper" type="AudioStreamPlayer" parent="Sound" index="0"]
+
+stream = ExtResource( 50 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="animation_finished" from="Hand/ShowUp" to="." method="_on_ShowUp_animation_finished"]
 

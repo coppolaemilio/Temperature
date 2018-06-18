@@ -573,7 +573,7 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=13]
 
-size = 56
+size = 48
 use_mipmaps = false
 use_filter = true
 extra_spacing_top = 3
@@ -745,6 +745,7 @@ _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 [node name="EndMessage" type="Control" parent="." index="5"]
 
 editor/display_folded = true
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -838,14 +839,13 @@ _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 [node name="Weather" type="Control" parent="." index="6"]
 
 editor/display_folded = true
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 208.0
+margin_left = 219.0
 margin_top = 80.0
-margin_right = 578.0
+margin_right = 589.0
 margin_bottom = 428.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
@@ -928,7 +928,6 @@ _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 [node name="ScoreList" type="VBoxContainer" parent="." index="7"]
 
 editor/display_folded = true
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -952,6 +951,7 @@ margin_right = 135.0
 
 [node name="CameraOperator" type="AnimatedSprite" parent="." index="8"]
 
+position = Vector2( 132, 0 )
 frames = SubResource( 16 )
 animation = "default"
 playing = true
@@ -969,8 +969,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 897.0
+margin_top = 24.0
 margin_right = 1024.0
-margin_bottom = 46.0
+margin_bottom = 70.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -1128,7 +1129,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 frames = SubResource( 17 )
 animation = "default"
-frame = 55
+frame = 68
 playing = true
 centered = false
 __meta__ = {
@@ -1140,7 +1141,7 @@ __meta__ = {
 visible = false
 frames = SubResource( 18 )
 animation = "default"
-frame = 6
+frame = 23
 playing = true
 centered = false
 __meta__ = {
@@ -1172,6 +1173,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="IntroSlide" type="Control" parent="." index="14"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -1185,12 +1187,33 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Intro" type="AnimatedSprite" parent="IntroSlide" index="0"]
 
 frames = SubResource( 10 )
 animation = "default"
 centered = false
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnswerContainer" type="Control" parent="." index="15"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 860.0
+margin_top = 211.0
+margin_right = 900.0
+margin_bottom = 251.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
 [connection signal="finished" from="Music/Intro" to="." method="_on_Intro_Music_finished"]
 

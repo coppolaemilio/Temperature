@@ -4,6 +4,7 @@ var counter = 0
 var limit = 150
 var end = false
 var text_index = 0
+var sound_played = 0
 
 func cache_invalidation():
 	randomize()
@@ -35,6 +36,9 @@ func _on_HTTPRequest_request_completed( result, response_code, headers, body ):
 	global.remote_data = json.result
 
 func _on_ShowUp_animation_finished():
+	if sound_played == 0:
+		$Sound/Paper.play()
+		sound_played = 1
 	$Hand/ShowUp.visible = false
 	$Hand/Stay.visible = true
 	$Hand/Stay.play('default')
@@ -43,6 +47,7 @@ func _input(event):
 	if $Hand/Stay.visible == true:
 		if event.is_action_pressed("ui_accept"):
 			if text_index == 0:
+				$Sound/Paper.play()
 				$Hand/Stay/Label.visible = false
 				$Hand/Stay/Label2.visible = true
 				text_index += 1
