@@ -59,3 +59,70 @@ Kyoto 23
 Sydney 13
 Havana 27
 Brasilia 26
+[master 490f15e] updating data
+ 3 files changed, 64 insertions(+), 3 deletions(-)
+ rewrite data.json (100%)
+ create mode 100644 nohup.out
+To https://coppolaemilio:f960dd511960fc721e4a98d7a66d7a09ba9349d3@github.com/coppolaemilio/Temperature.git
+   870447d..490f15e  master -> master
+Berlin 12
+New York 19
+San Francisco 31
+Miami 27
+Seattle 21
+Toronto 18
+Mexico City 14
+Rio De Janeiro 24
+Buenos Aires 5
+Cape Town 11
+Stockholm 7
+Marrakech 19
+Oslo 9
+Helsinki 7
+Brussels 12
+Riga 13
+Vilnius 11
+Munich 12
+Amsterdam 12
+Mumbai 25
+Beijing 32
+Tokyo 22
+Osaka 24
+Cairo 25
+Istanbul 20
+Lagos 24
+Moscow 20
+Paris 13
+Jakarta 27
+London 14
+Bangalore 21
+Lima 12
+Seoul 27
+Bogota 14
+Johannesburg 5
+Bangkok 30
+Chicago 22
+Tehran 24
+Hong Kong 31
+Kuala Lumpur 26
+Santiago 7
+Madrid 21
+Dallas 33
+Singapore 26
+Barcelona 21
+Valencia 23
+Atlanta 24
+Monterrey 29
+Hanoi 29
+Caracas 24
+Dublin 9
+Lisbon 19
+Rome 18
+Zurich 11
+Vienna 14
+Prague 12
+Warsaw 11
+Kyoto 25
+Sydney 14
+Havana 26
+Brasilia 26
