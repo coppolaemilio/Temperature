@@ -4,7 +4,7 @@ import math
 
 # Loading API key from settings.
 with open('settings', 'r') as f:
-    API_ID = f.readline()
+    API_ID = f.readline().replace('\n','')
 
 # List of cities
 cities = ['Berlin', 'New York', 'San Francisco', 'Miami', 'Seattle', 'Toronto',
