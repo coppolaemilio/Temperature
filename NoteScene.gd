@@ -5,6 +5,7 @@ var limit = 150
 var end = false
 var text_index = 0
 var sound_played = 0
+var loading_weird_delay = 20
 
 func cache_invalidation():
 	randomize()
@@ -12,10 +13,10 @@ func cache_invalidation():
 	return value
 
 func _ready():
-	var dataurl = "https://coppolaemilio.com/Temperature/data.json?" + cache_invalidation()
-	print('Requesting weather data: ' + dataurl)
-	$HTTPRequest.request(dataurl,PoolStringArray(), false)
-	
+	if global.unit == 'f':
+		for val in global.remote_data:
+			var celcius = global.remote_data[val]
+			global.remote_data[val] = round(9.0/5.0 * celcius + 32)
 	
 	$Hand/ShowUp.visible = false
 	$Hand/Stay.visible = false
@@ -30,15 +31,16 @@ func _process(delta):
 		end = true
 		$Hand/ShowUp.visible = true
 		$Hand/ShowUp.play('default')
-
-func _on_HTTPRequest_request_completed( result, response_code, headers, body ):
-	var json = JSON.parse(body.get_string_from_utf8())
-	global.remote_data = json.result
-	
-	if global.unit == 'f':
-		for val in global.remote_data:
-			var celcius = global.remote_data[val]
-			global.remote_data[val] = round(9.0/5.0 * celcius + 32)
+	if text_index == 2:
+		"""
+		I had to add this weird count down 
+		because otherwise the loading screen
+		would not go to visible before tryting
+		to change the room.
+		"""
+		loading_weird_delay -= 1
+		if loading_weird_delay < 0:
+			get_tree().change_scene("res://main.tscn")
 
 func _on_ShowUp_animation_finished():
 	if sound_played == 0:
@@ -57,5 +59,6 @@ func _input(event):
 				$Hand/Stay/Label2.visible = true
 				text_index += 1
 			elif text_index == 1:
-				get_tree().change_scene("res://main.tscn")
+				$Loading.visible = true
+				text_index += 1
 

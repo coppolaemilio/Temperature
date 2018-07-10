@@ -2,8 +2,8 @@ extends Node
 
 var VIEW_W = 1024
 var BLANK_INPUT = '   '
-var cities = global.cities
-var cities_size = global.cities.size()
+var cities = global.remote_data.keys()
+var cities_size = cities.size()
 var city_index = 0
 var city_limit = 12 # How many cities to show
 var headlines_width = 0 # it gest calculated in the _ready() function
@@ -217,7 +217,7 @@ func _input(event):
 				color = '#d55a32'
 			
 			add_answer(
-				global.short_codes[cities[city_index]],
+				global.city_list[cities[city_index]],
 				answer,
 				remote_data[cities[city_index]],
 				color,

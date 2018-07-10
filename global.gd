@@ -4,20 +4,7 @@ var remote_data = {}
 var best_score = 0
 var unit = 'c'
 
-var cities = [
-	'Berlin', 'New York', 'San Francisco', 'Miami', 'Seattle', 'Toronto',
-	'Mexico City', 'Rio De Janeiro', 'Buenos Aires', 'Cape Town', 'Stockholm',
-	'Marrakech', 'Oslo', 'Helsinki', 'Riga', 'Vilnius', 'Munich',
-	'Amsterdam', 'Mumbai', 'Beijing', 'Tokyo', 'Osaka', 'Cairo', 'Istanbul',
-	'Lagos', 'Moscow', 'Paris', 'Jakarta', 'London', 'Bangalore', 'Lima',
-	'Seoul', 'Bogota', 'Johannesburg', 'Bangkok', 'Chicago', 'Tehran',
-	'Hong Kong', 'Kuala Lumpur', 'Santiago', 'Madrid', 'Dallas', 'Singapore',
-	'Barcelona', 'Valencia', 'Atlanta', 'Monterrey', 'Hanoi', 'Caracas',
-	'Dublin', 'Lisbon', 'Rome', 'Zurich', 'Vienna', 'Prague', 'Warsaw', 'Kyoto',
-	'Sydney', 'Havana', 'Brasilia'
-]
-
-var short_codes = {
+var city_list = {
 	'Berlin': 'BER',
 	'New York': 'NYC',
 	'San Francisco': 'SFO',
@@ -25,14 +12,12 @@ var short_codes = {
 	'Seattle': 'SEA',
 	'Toronto': 'YTO',
 	'Mexico City': 'MEX',
-	'Rio De Janeiro': 'RIO',
 	'Buenos Aires': 'BUE',
 	'Cape Town': 'CAP',
 	'Stockholm': 'STO',
 	'Marrakech': 'MAR',
 	'Oslo': 'OSL',
 	'Helsinki': 'HEL',
-	'Riga': 'RIG',
 	'Vilnius': 'VIL',
 	'Munich': 'MUN',
 	'Amsterdam': 'AMS',
@@ -51,20 +36,16 @@ var short_codes = {
 	'Lima': 'LIM',
 	'Seoul': 'SEO',
 	'Bogota': 'BOG',
-	'Johannesburg': 'JOH',
 	'Bangkok': 'BAN',
 	'Chicago': 'CHI',
-	'Tehran': 'TEH',
 	'Hong Kong': 'HNK',
 	'Kuala Lumpur': 'KUA',
 	'Santiago': 'SAN',
 	'Madrid': 'MAD',
-	'Dallas': 'DAL',
 	'Singapore': 'SIN',
 	'Barcelona': 'BNC',
 	'Valencia': 'VLC',
 	'Atlanta': 'ATL',
-	'Monterrey': 'MON',
 	'Hanoi': 'HAN',
 	'Caracas': 'CAR',
 	'Dublin': 'DUB',
@@ -79,7 +60,6 @@ var short_codes = {
 	'Havana': 'HAV',
 	'Brasilia': 'BRA'
 }
-
 
 
 var news = [
@@ -113,13 +93,6 @@ var news = [
 	'Most advanced AI refuses to watch cat pictures',
 	'Countries of the world in debt with all countries of the world.',
 	'Coffeehouse chain CEO: having utter-worldwide-monopoly is not fun anymore',
-	# '',
-	# 'New viral video collapses the Internet for an entire minute',
-	# 'Trillions of millions of moneys of some currency lost, and then created again.',
-	# 'Man accidentally poisoned after eating poison, sues poison company',
-	# 'A microphone stand wins by accident Miss International',
-	# 'The Steam platform to only accept games with a battle royal multiplayer mode',
-	# 'Twenty million people injured after heated debate on toilet\'s paper rolling direction',
 ]
 
 func _input(event):

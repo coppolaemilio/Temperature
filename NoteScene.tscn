@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://NoteScene.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/note_bg/note_bg_00000.png" type="Texture" id=2]
@@ -50,6 +50,7 @@
 [ext_resource path="res://Sprites/note_stay/note_stay_00038.png" type="Texture" id=48]
 [ext_resource path="res://Scenes/TextOnHand.tscn" type="PackedScene" id=49]
 [ext_resource path="res://Sound/paper.wav" type="AudioStream" id=50]
+[ext_resource path="res://Fonts/Roboto.tres" type="DynamicFont" id=51]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -60,7 +61,7 @@ animations = [ {
 "speed": 30.0
 } ]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
 "frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
@@ -69,7 +70,7 @@ animations = [ {
 "speed": 30.0
 } ]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
 "frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ) ],
@@ -78,9 +79,8 @@ animations = [ {
 "speed": 30.0
 } ]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=4]
 
-resource_name = "FadeIn"
 length = 2.0
 loop = false
 step = 0.1
@@ -105,7 +105,7 @@ script = ExtResource( 1 )
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 8
+frame = 7
 playing = true
 centered = false
 __meta__ = {
@@ -114,19 +114,21 @@ __meta__ = {
 
 [node name="Hand" type="Node" parent="." index="1"]
 
+editor/display_folded = true
+
 [node name="ShowUp" type="AnimatedSprite" parent="Hand" index="0"]
 
 visible = false
-frames = SubResource( 3 )
+frames = SubResource( 2 )
 animation = "default"
 frame = 2
 centered = false
 
 [node name="Stay" type="AnimatedSprite" parent="Hand" index="1"]
 
-frames = SubResource( 4 )
+frames = SubResource( 3 )
 animation = "default"
-frame = 6
+frame = 4
 playing = true
 centered = false
 
@@ -142,6 +144,7 @@ in 10 seconds."
 
 [node name="ColorRect" type="ColorRect" parent="." index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -166,18 +169,13 @@ autoplay = "FadeIn"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/FadeIn = SubResource( 2 )
+anims/FadeIn = SubResource( 4 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
-[node name="HTTPRequest" type="HTTPRequest" parent="." index="3"]
+[node name="Sound" type="Node" parent="." index="3"]
 
-download_file = ""
-use_threads = false
-body_size_limit = -1
-max_redirects = 8
-
-[node name="Sound" type="Node" parent="." index="4"]
+editor/display_folded = true
 
 [node name="Paper" type="AudioStreamPlayer" parent="Sound" index="0"]
 
@@ -188,8 +186,62 @@ autoplay = false
 mix_target = 0
 bus = "Master"
 
-[connection signal="animation_finished" from="Hand/ShowUp" to="." method="_on_ShowUp_animation_finished"]
+[node name="Loading" type="Control" parent="." index="4"]
 
-[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="ColorRect2" type="ColorRect" parent="Loading" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = -1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.207843, 0.184314, 0.180392, 1 )
+
+[node name="Label" type="Label" parent="Loading" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 927.0
+margin_top = 557.0
+margin_right = 1011.0
+margin_bottom = 589.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 51 )
+text = "Loading..."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_fonts" ]
+
+[connection signal="animation_finished" from="Hand/ShowUp" to="." method="_on_ShowUp_animation_finished"]
 
 
