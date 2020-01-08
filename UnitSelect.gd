@@ -6,7 +6,6 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed('unit_c'):
 		global.unit = 'c'
-		get_tree().change_scene("res://NoteScene.tscn")
 	if event.is_action_pressed('unit_f'):
 		global.unit = 'f'
-		get_tree().change_scene("res://NoteScene.tscn")
+	get_tree().change_scene("res://NoteScene.tscn")
