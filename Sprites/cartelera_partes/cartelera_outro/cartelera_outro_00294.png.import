@@ -3,6 +3,9 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/cartelera_outro_00294.png-ab2c8d52286e02f22e2741e9669e3e51.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
@@ -14,6 +17,7 @@ dest_files=[ "res://.import/cartelera_outro_00294.png-ab2c8d52286e02f22e2741e966
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -23,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
